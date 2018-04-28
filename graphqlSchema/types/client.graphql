@@ -1,0 +1,43 @@
+input ClientInput{
+  id: Int
+  client: String
+  name: String
+  address: String
+  city: String
+  zipCode: String
+  clientType: String
+  phoneOne: String
+  phoneTwo: String
+  fax: String
+  email: String
+  contact: String
+  country: String
+  documentType: String
+}
+
+type Client{
+  id: Int
+  client: String
+  name: String
+  address: String
+  city: String
+  zipCode: String
+  clientType: String
+  phoneOne: String
+  phoneTwo: String
+  fax: String
+  email: String
+  contact: String
+  country: String
+  documentType: String
+}
+
+type Query{
+  clients:[Client]
+}
+
+type Mutation{
+  setClient(clientInfo:ClientInput):Client
+  editClient(clientInfo:ClientInput):Client
+  deleteClient(id:String):Client
+}
